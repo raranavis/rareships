@@ -1,0 +1,74 @@
+@use "reset";
+@use "variables" as *;
+@use "components";
+
+* {
+  font-family: $regular;
+  font-weight: $bold;
+  font-size: $standard;
+  color: white;
+
+  :where(h1, h2, h3) {
+    font-family: $title;
+    font-size: $large;
+  }
+
+  :where(img) {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  
+  :where(p) {
+    cursor: default;
+  }
+
+  :where(button, .level) {
+    color: inherit;
+    font-size: inherit;
+    transition: all 0.3s ease-out;
+  
+    &:hover, &:active {
+      opacity: 0.75;
+      transform: scale(1.05);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      transform: none;
+    }
+  }
+}
+
+html {
+  font-size: $standard;
+  line-height: $standard * 1.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  padding-inline: $standard * 1.5;
+  overflow-y: hidden;
+  background-image: linear-gradient(to top right,black, $blue);
+
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: $large;
+    padding: $standard;
+    height: 100vh;
+  }
+}
+
+@media screen and ($pc) { 
+  html {
+    background-image: url('/pictures/ocean.png'), linear-gradient(to top right,black, $blue);
+  }
+}
+
+@media screen and ($mobile) { 
+  html {
+    background-image: linear-gradient(to top right,black, $blue);
+  }
+}

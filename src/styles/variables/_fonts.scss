@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Heartisan;
+  src: url("/fonts/Heartisan.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("/fonts/Montserrat.otf") format("opentype");
+}
+
+$title: Heartisan, sans-serif;
+$regular: Montserratm, sans-serif;
+$bold: 700;
+
+// Sizes
+
+$large: 5rem;
+$standard: 1rem;
+$thin: 0.1rem;

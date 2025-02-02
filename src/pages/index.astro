@@ -1,0 +1,66 @@
+---
+import "../styles/index.scss";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <div>
+      <img src="/logo-white.png" alt="Logo" />
+      <h1>RARESHIPS</h1>
+    </div>
+
+    <span>
+      <img src="/factions/1-white.png" />
+      <img src="/factions/2-white.png" />
+      <img src="/factions/3-white.png" />
+      <img src="/factions/4-white.png" />
+      <img src="/factions/5-white.png" />
+      <img src="/factions/6-white.png" />
+    </span>
+  </main>
+</Layout>
+
+<!-- temp styling -->
+<style lang="scss">
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-shadow: 0 0.5rem 1rem black;
+
+    img {
+      width: 7.5rem;
+      filter: drop-shadow(0 0.5rem 1rem black);
+    }
+  }
+
+  span {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      width: 5rem;
+      filter: drop-shadow(0 0.5rem 1rem black);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    img {
+      width: 2rem !important;
+    }
+
+    span {
+      flex-direction: column;
+    }
+  }
+</style>
